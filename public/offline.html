@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Offline · Murali Preya project 1 Crore</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #f6f7f4;
+        color: #17352b;
+        font-family: system-ui, -apple-system, sans-serif;
+        text-align: center;
+        padding: 24px;
+      }
+      h1 { font-size: 24px; margin: 0 0 8px; }
+      p { color: #6d7a72; max-width: 360px; line-height: 1.6; }
+      button {
+        margin-top: 14px;
+        border: 0;
+        border-radius: 7px;
+        background: #17352b;
+        color: #fff;
+        padding: 10px 16px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>You're offline</h1>
+      <p>Your ledger needs a connection to stay private and up to date. Reconnect and try again.</p>
+      <button onclick="location.reload()">Try again</button>
+    </div>
+  </body>
+</html>

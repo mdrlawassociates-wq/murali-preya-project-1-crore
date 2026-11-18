@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: murali-preya-project-1-crore
+    runtime: docker
+    plan: starter
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_PATH
+        value: /app/data/family-finance.db
+    disk:
+      name: murali-preya-data
+      mountPath: /app/data
+      sizeGB: 1

@@ -1,0 +1,14 @@
+services:
+  murali-preya-project-1-crore:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      DATABASE_PATH: /app/data/family-finance.db
+    volumes:
+      - murali-preya-project-1-crore-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  murali-preya-project-1-crore-data:
