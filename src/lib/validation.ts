@@ -4,8 +4,9 @@ import { EXPENSE_CATEGORIES, INCOME_CATEGORIES } from "./categories";
 export const registerSchema = z.object({
   name: z.string().trim().min(2, "Enter your name").max(60),
   partnerName: z.string().trim().max(60).optional().default("Partner"),
-  email: z.string().trim().toLowerCase().email("Enter a valid email"),
-  password: z.string().min(8, "Use at least 8 characters").max(100),
+  // Stored in the legacy `email` column, but accepts a simple username like "admin".
+  email: z.string().trim().toLowerCase().min(1, "Enter a username").max(100),
+  password: z.string().min(4, "Use at least 4 characters").max(100),
   householdName: z.string().trim().min(2).max(60),
 });
 
@@ -14,7 +15,7 @@ export const personSchema = z.object({
 });
 
 export const loginSchema = z.object({
-  email: z.string().trim().toLowerCase().email("Enter a valid email"),
+  email: z.string().trim().toLowerCase().min(1, "Enter your username").max(100),
   password: z.string().min(1, "Enter your password"),
 });
 

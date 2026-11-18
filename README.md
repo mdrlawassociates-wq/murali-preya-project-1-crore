@@ -38,11 +38,11 @@ For this prepared workspace, the shared login is:
 
 | | |
 | --- | --- |
-| Email | `home@gharkhata.in` |
-| Password | `GharKhata@2026` |
+| Username | `admin` |
+| Password | `admin` |
 
-Change it any time on **Settings → Change password**. If you deploy with a fresh database, the
-first account you create becomes the shared login instead.
+Change the password any time on **Settings → Change password**. If you deploy with a fresh
+database, the first account you create becomes the shared login instead.
 
 Optional: on **Settings → Sample data**, load four months of example entries, home/car/gold
 loans and monthly budgets to explore the analytics before entering your own numbers. This only

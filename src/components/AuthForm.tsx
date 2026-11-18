@@ -93,13 +93,13 @@ export function AuthForm({ mode }: Props) {
         )}
 
         <label className="field">
-          <span>Email address</span>
+          <span>Username</span>
           <input
-            type="email"
-            autoComplete="email"
+            type="text"
+            autoComplete="username"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
-            placeholder="you@example.com"
+            placeholder="admin"
             required
           />
         </label>
@@ -110,8 +110,8 @@ export function AuthForm({ mode }: Props) {
             autoComplete={mode === "login" ? "current-password" : "new-password"}
             value={password}
             onChange={(event) => setPassword(event.target.value)}
-            placeholder={mode === "login" ? "Your password" : "At least 8 characters"}
-            minLength={mode === "register" ? 8 : 1}
+            placeholder={mode === "login" ? "Your password" : "At least 4 characters"}
+            minLength={mode === "register" ? 4 : 1}
             required
           />
         </label>

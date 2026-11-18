@@ -84,7 +84,7 @@ export function MembersView({ user, household, members, spend, monthLabel }: Pro
         </div>
         <div className="invite-strip">
           <div>
-            <span>Shared login email</span>
+            <span>Shared login</span>
             <strong className="mono shared-login">{user.email}</strong>
           </div>
           <span className="badge-note">Change password in Settings</span>
